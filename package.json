@@ -1,0 +1,24 @@
+{
+  "name": "railsonify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "leaflet": "^1.4.0",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magpielag/railsonify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magpielag/railsonify/issues"
+  },
+  "homepage": "https://github.com/magpielag/railsonify#readme"
+}
