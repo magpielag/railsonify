@@ -5,14 +5,15 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "d3-geo": "^1.11.3",
     "express": "^4.16.4",
     "fs": "0.0.1-security",
     "jquery": "^3.3.1",
-    "leaflet": "^1.4.0",
     "mongoose": "^5.4.9",
     "node-fetch": "^2.3.0",
     "path": "^0.12.7",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "topojson-client": "^3.0.0"
   },
   "devDependencies": {},
   "scripts": {
