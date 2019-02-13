@@ -1,0 +1,3 @@
+1. Convert rank checker function to read through in rank order, will cut the number of loops to find the highest ranked CRS.
+2. Work out how to link sequenced calls on the server (fire on train departure) with drawing function on client-side.
+3. Check client-side canvas file and figure out what to do with it next.
