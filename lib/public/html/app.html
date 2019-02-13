@@ -5,7 +5,7 @@
 
 <body>
   <div class="searchContainer">
-    <form method="POST" action="/">
+    <form class='stationForm' method="POST" action="/">
       <input name="station" type="text" placeholder="Enter a station name">
       <input type="submit" value="Get">
       </form>
@@ -14,12 +14,10 @@
       <canvas class='canvas' width="1000" height="1000" style="background: url(./img/map.jpg)"></canvas>
       <script>
         var canvas = document.getElementsByClassName('canvas')[0]
-            ctx = canvas.getContext("2d")
-            bg = new Image();
-        canvas.width = 1000;
-        canvas.height = 1000;
-        bg.src = "./img/map.jpg";
-        bg.onLoad = function() { ctx.drawImage(bg, 0, 0); }
+            ctx = canvas.getContext("2d");
+        console.log(ctx);
+        ctx.fillRect(293, 983 ,2, 2);
+        ctx.fillRect(534, 201 ,2, 2);
       </script>
     </div>
 </body>
