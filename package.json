@@ -10,6 +10,7 @@
     "fs": "0.0.1-security",
     "jquery": "^3.3.1",
     "mongoose": "^5.4.9",
+    "nedb": "^1.8.0",
     "node-fetch": "^2.3.0",
     "path": "^0.12.7",
     "request": "^2.88.0",
