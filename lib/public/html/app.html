@@ -5,19 +5,34 @@
 
 <body>
   <div class="searchContainer">
-    <form class='stationForm' method="POST" action="/">
+    <form id="stationForm" method="POST" action="/">
       <input name="station" type="text" placeholder="Enter a station name">
       <input type="submit" value="Get">
       </form>
+      <script type="text/javascript">
+      // this is the id of the form
+      $("#stationForm").submit(function(e) {
+          var form = $(this);
+          var url = form.attr('action');
+
+          $.ajax({
+                 type: "POST",
+                 url: url,
+                 data: form.serialize(), // serializes the form's elements.
+                 success: function(data)
+                 {
+                     console.log(data); // show response from the php script.
+                 },
+                 error: function (data) {
+                   console.log('An error occurred.');
+                   console.log(data);
+                  }
+               });
+          e.preventDefault(); // avoid to execute the actual submit of the form.
+      });
+      </script>
     </div>
     <div class='map'>
       <canvas class='canvas' width="1000" height="1000" style="background: url(./img/map.jpg)"></canvas>
-      <script>
-        var canvas = document.getElementsByClassName('canvas')[0]
-            ctx = canvas.getContext("2d");
-        console.log(ctx);
-        ctx.fillRect(293, 983 ,2, 2);
-        ctx.fillRect(534, 201 ,2, 2);
-      </script>
     </div>
 </body>
