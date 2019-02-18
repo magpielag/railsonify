@@ -9,28 +9,7 @@
       <input name="station" type="text" placeholder="Enter a station name">
       <input type="submit" value="Get">
       </form>
-      <script type="text/javascript">
-      // this is the id of the form
-      $("#stationForm").submit(function(e) {
-          var form = $(this);
-          var url = form.attr('action');
-
-          $.ajax({
-                 type: "POST",
-                 url: url,
-                 data: form.serialize(), // serializes the form's elements.
-                 success: function(data)
-                 {
-                     console.log(data); // show response from the php script.
-                 },
-                 error: function (data) {
-                   console.log('An error occurred.');
-                   console.log(data);
-                  }
-               });
-          e.preventDefault(); // avoid to execute the actual submit of the form.
-      });
-      </script>
+      <script src="js/scheduler.js"></script>
     </div>
     <div class='map'>
       <canvas class='canvas' width="1000" height="1000" style="background: url(./img/map.jpg)"></canvas>
