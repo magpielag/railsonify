@@ -1,3 +1,9 @@
-1. Convert rank checker function to read through in rank order, will cut the number of loops to find the highest ranked CRS.
-2. Work out how to link sequenced calls on the server (fire on train departure) with drawing function on client-side.
-3. Check client-side canvas file and figure out what to do with it next.
+[]: Update databases on interval - clear out past times.
+[]: Alpha-based fade drawing.
+[]: Garbage collection for databases?
+[]: Remove logging and clean up.
+
+
+
+Fade drawing (canvas): https://stackoverflow.com/questions/41483806/painting-in-canvas-which-fades-with-time-strange-alpha-layering-behaviour
+Switch option for live and cached - cached would pertain to a sped-up overview of a single station from the previous day of transport data.
