@@ -1,3 +1,4 @@
+[]: Clean code.
 []: Update databases on interval - clear out past times.
 []: Alpha-based fade drawing.
 []: Garbage collection for databases?
