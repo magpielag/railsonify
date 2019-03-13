@@ -1,3 +1,4 @@
+[]: Fix db issue - reinit on db variable cannot occur, need to return and update variable whenever possible.
 [~]: Clean code -> [~]  Sort Database File -> [~] Refactor so write functions occur in server, then res.send() -> [] Update scheduler to work with new format.
 []: Update databases on interval - clear out past times.
 []: Alpha-based fade drawing.
@@ -8,3 +9,6 @@
 
 Fade drawing (canvas): https://stackoverflow.com/questions/41483806/painting-in-canvas-which-fades-with-time-strange-alpha-layering-behaviour
 Switch option for live and cached - cached would pertain to a sped-up overview of a single station from the previous day of transport data.
+
+Client -> Call server for coords -> db.grab for location -> ajax return function -> scheduler -> canvas drawing.
+If routes departure = undefined, set to be the current station if route is zero.
