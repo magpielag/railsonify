@@ -4,7 +4,7 @@
 []: Alpha-based fade drawing.
 []: Garbage collection for databases?
 []: Remove logging and clean up.
-
+[]: Fix time input to timetable lookup.
 
 
 Fade drawing (canvas): https://stackoverflow.com/questions/41483806/painting-in-canvas-which-fades-with-time-strange-alpha-layering-behaviour
