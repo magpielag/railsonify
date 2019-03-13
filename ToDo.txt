@@ -1,5 +1,3 @@
-[]: Fix db issue - reinit on db variable cannot occur, need to return and update variable whenever possible.
-[~]: Clean code -> [~]  Sort Database File -> [~] Refactor so write functions occur in server, then res.send() -> [] Update scheduler to work with new format.
 []: Update databases on interval - clear out past times.
 []: Alpha-based fade drawing.
 []: Garbage collection for databases?
