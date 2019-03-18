@@ -1,5 +1,6 @@
-[]: Set client side interval function to refresh db and set new scheduler - to keep the currently chosen station drawings running constantly.
+[]: Fix scheduler refresh function.
 []: Alpha-based fade drawing.
+[]: Test.
 []: Remove logging and clean up.
 AUDIO:
 []
