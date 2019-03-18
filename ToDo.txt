@@ -1,9 +1,8 @@
-[]: Update databases on interval - clear out past times.
+[]: Set client side interval function to refresh db and set new scheduler - to keep the currently chosen station drawings running constantly.
 []: Alpha-based fade drawing.
-[]: Garbage collection for databases?
 []: Remove logging and clean up.
-[]: Fix time input to timetable lookup.
-
+AUDIO:
+[]
 
 Fade drawing (canvas): https://stackoverflow.com/questions/41483806/painting-in-canvas-which-fades-with-time-strange-alpha-layering-behaviour
 Switch option for live and cached - cached would pertain to a sped-up overview of a single station from the previous day of transport data.
