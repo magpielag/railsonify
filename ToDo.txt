@@ -1,5 +1,9 @@
 []: Fix scheduler refresh function.
+[]: Perhaps parse late timings out of scheduler if they do not fall within the next X minutes - depending on the endTime variable.
+[]: Add removal of db on app close.
+[]: Add "if empty" clause when looking at db - should rerun on a timer equal to that of the endTime variable.
 []: Alpha-based fade drawing.
+[]: Multi-drawing functionality.
 []: Test.
 []: Remove logging and clean up.
 AUDIO:
