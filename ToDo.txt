@@ -1,13 +1,19 @@
-[]: Fix scheduler refresh function.
-[]: Perhaps parse late timings out of scheduler if they do not fall within the next X minutes - depending on the endTime variable.
-[]: Add removal of db on app close.
-[]: Add "if empty" clause when looking at db - should rerun on a timer equal to that of the endTime variable.
-[]: Alpha-based fade drawing.
-[]: Multi-drawing functionality.
-[]: Test.
-[]: Remove logging and clean up.
+ISSUE:
+  []: Not finding any trains in updates.
+
 AUDIO:
-[]
+  []: Add audio class to scheduler.
+
+NON-AUDIO:
+  []: Fix scheduler refresh function.
+  []: Perhaps parse late timings out of scheduler if they do not fall within the next X minutes - depending on the endTime variable.
+  []: Add removal of db on app close.
+  []: Add "if empty" clause when looking at db - should rerun on a timer equal to that of the endTime variable.
+  []: Alpha-based fade drawing.
+  []: Multi-drawing functionality.
+  []: Test.
+  []: Remove logging and clean up.
+
 
 Fade drawing (canvas): https://stackoverflow.com/questions/41483806/painting-in-canvas-which-fades-with-time-strange-alpha-layering-behaviour
 Switch option for live and cached - cached would pertain to a sped-up overview of a single station from the previous day of transport data.
