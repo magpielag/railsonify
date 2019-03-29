@@ -1,5 +1,6 @@
 # railsonify
 _Roadmap:_
+
 0. Developed protoype application to collect user feedback of difficulty in aligning geolocational data in two-dimensions to a playback sound sonified using a set of one-to-one parameter mappings. 
 1. Identified existing projects within the area: web applications utilising data for sonification.
 2. Identified the core frameworks and libraries utilised within existing projects to aid in the simplification of prototype and final product. 
