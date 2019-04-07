@@ -1,5 +1,23 @@
 <html>
 <head>
+  <style>
+    form {
+      height: 20px;
+      width: 400px;
+    }
+    .resumeButton {
+      background-color: #008CBA;
+      color: white;
+      text-align: center;
+      padding: 1px 32px;
+    }
+    .startButton {
+      background-color: #555555;
+      color: white;
+      text-align: center;
+      padding: 1px 32px;
+    }
+  </style>
   <title> Railsonify </title>
   <script src="https://tonejs.github.io/build/Tone.js" type="text/javascript"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
@@ -8,15 +26,24 @@
 
 <body>
   <script src="js/synth.js"></script>
-  <div align='center' class="searchContainer">
-    <form id="stationForm" method="POST" action="/">
-      <input name="station" type="text" placeholder="Enter a station name">
-      <input type="submit" value="Get">
-      </form>
+    <div align='left' class="searchContainer" style="width:500px;">
+      Station Lookup:
+      <div align='center'>
+      <form id="stationForm" method="POST" action="/">
+        <input name="station" type="text" placeholder="Enter a station name">
+        <input type="submit" value="Get">
+        </form>
+        <button class='startButton' id='startButton' value='Random' onclick='startWithRandom(this);'>Random</button>
+        <button class='resumeButton' onclick='resumeContext(this);'>Start</button>
+      </div>
     </div>
     <div align='center' id='map' class='map'>
       <canvas id='canvas0' width="1000" height="1000" style="background: url(./img/map.jpg)"></canvas>
       <script src="js/canvas.js"></script>
+      <div align='right'>
+        Sonification Type:
+        <input type="button" id="typeChanger" value="Continuous" style="color:red" onclick="changeSonificationType(this);">
+      </div>
     </div>
     <div align='center'><svg width="1920" height="30"></div>
     <div align='center'> <svg width="1920" height="20">
