@@ -5,6 +5,22 @@
       height: 20px;
       width: 400px;
     }
+    h2 {
+      font-family: "Verdana", Verdana, sans-serif;
+    }
+    p {
+      font-family: "Verdana", Verdana, sans-serif;
+    }
+    h4 {
+      font-family: "Verdana", Verdana, sans-serif;
+      color: #2E9AFE;
+    }
+    .keyp {
+      font-family: "Verdana", Verdana, sans-serif;
+      height: 7px;
+      width: 300px;
+      padding: 0px;
+    }
     .resumeButton {
       background-color: #008CBA;
       color: white;
@@ -17,6 +33,21 @@
       text-align: center;
       padding: 1px 32px;
     }
+    .submissionButton {
+      background-color: #C31F3B;
+      color: white;
+      text-align: center;
+      padding: 1px 18px;
+    }
+    .searchContainer {
+      float: left;
+    }
+    .rText {
+      padding: 0px;
+      float: right;
+      width: 100px;
+      height: 100px;
+    }
   </style>
   <title> Railsonify </title>
   <script src="https://tonejs.github.io/build/Tone.js" type="text/javascript"></script>
@@ -26,17 +57,20 @@
 
 <body>
   <script src="js/synth.js"></script>
+  <div>
+    <div class ='rText' id='rText' align='right'></div>
     <div align='left' class="searchContainer" style="width:500px;">
-      Station Lookup:
       <div align='center'>
+        <p class='keyp'z> Station Lookup: </p>
       <form id="stationForm" method="POST" action="/">
         <input name="station" type="text" placeholder="Enter a station name">
-        <input type="submit" value="Get">
+        <input class='submissionButton' type="submit" value="Get">
         </form>
         <button class='startButton' id='startButton' value='Random' onclick='startWithRandom(this);'>Random</button>
         <button class='resumeButton' onclick='resumeContext(this);'>Start</button>
       </div>
     </div>
+  </div>
     <div align='center' id='map' class='map'>
       <canvas id='canvas0' width="1000" height="1000" style="background: url(./img/map.jpg)"></canvas>
       <script src="js/canvas.js"></script>
@@ -52,6 +86,30 @@
     </div>
     <div align='left'>
       <h2>Instructions:</h2>
+      <p>
+        Welcome to <i> Railsonify, </i> an experiment in the sonification of rail route and timetable data.
+      </p>
+      <p>
+        <i> Note to the user: </i> This application has been tested using Firefox & Chrome
+         on MacOS and Ubuntu. However, audio issues such as popping and glitching
+         do still occur, mainly due to a slowing/blocking caused by the inefficiency of
+         browsers on <i> some </i> systems. Apologies for this.
+      </p>
+      <h4> How to use: </h4>
+      <p> This application is semi-interactive, meaning you have control over the monitored stations.
+        To do this, enter a station code (a three character format string) or a location (any town/city will work) to set a montitored station.
+        The number of stations you may monitor at any one time is <i> technically </i> limited only by your browser and the API pipeline, so multiple
+        station entries will begin a simultaneous monitoring of multiple stations.
+       </p>
+       <p>
+         Sounds are generated in two different formats/modes: <i> Discrete </i> and <i> Continuous </i> (for further information on the differences
+         between these methods, please see the relevant sections in the accompanying report). Continuous sounds follow a mapping as follows:
+         <ul>
+           <li><p><b>Train Departure Time:</b> If a train departing a montiored station is late, the volume level of
+           the filtered noise will be higher - there are two settings; 'Low' (-6dB) for normal departures and 'High' (-3dB) for
+           late departures. </p></li>
+        </ul>
+       </p>
     </div>
     <script src="js/scheduler.js"></script>
 </body>
