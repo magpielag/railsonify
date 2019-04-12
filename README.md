@@ -1,4 +1,21 @@
 # railsonify
+_Instructions:_
+To install this project, clone to a local directory, cd into the node_modules folder and install npm packages using:
+```
+npm install
+```
+
+Once installed, cd back to the root folder 'railsonify-master' and run:
+```
+node lib/server
+```
+
+To access the application once the server is running, open a Chrome browser and navigate to localhost:5000
+
+_Known issues:_
+1. Canvases can be out of line with each other on certain desktop resolutions (larger or smaller than 1080p) due to absolute offsets.
+2. Database error when monitoring a large number of stations: Stop server, manually remove 'database.db' and start server.
+
 _Roadmap:_
 
 0. Developed protoype application to collect user feedback of difficulty in aligning geolocational data in two-dimensions to a playback sound sonified using a set of one-to-one parameter mappings. 
@@ -7,22 +24,6 @@ _Roadmap:_
 3. Developed the basic UI concepts and elements using vanilla JS (to cut down on libraries required). 
 4. Developed the background systems required to pull, store, delete, and update live timetable and discrete geolocational route data from an online API. 
 5. Added initial audio concepts using simplified interactions and mappings based upon the findings in step 0. 
-
-__Done:__
-* Removed ambiguity for non-exact search queries: Now returns station with the highest footfall relating to the input string (i.e. 'London' will return Waterloo, as London Waterloo has a higher footfall than the other 'London' stations such as Kings Cross). 
-* Built counties map of UK from Topojson -> Geojson data, map file can be edited to change the shape/border vectors of the map at any time.
-
-Todo: 
-1. Update matching functionality to include lowercase.
-2. Set variable within server file to store station code, will allow re-writing of data on an interval (given the code matches that stored elsewhere - verif?). 
-3. Set up location storing again - maybe use another API if available to find the route information between stations so routes can be drawn on maps at a later point. 
-4. Look at leaflet and d3 to start processing and drawing lon, lat on maps. 
-5. [When information is back on mappings]: Implement audio with mapping crtier
-
-Notes:
-1. Database refresh every 5 minutes, hopefully enough time to find updates to timetable issues (lateness, ect). 
-2. Fire audio output when trains depart - harmonicity depedent on lateness (disonance for late leaving trains). 
-3. Slow release pad sounds, different sounds/notes dependent on train operator? 
-4. Panning dependent on direction of leaving train, shown by the drawn path. 
-5. Drawing of routes can be depdendent on the total time taken between points - the longer the time, the longer it takes to draw the path.
-6. Multiple station departures can have their playback dependent on a weighting decided by the footfall ranking of the arrival station - perhaps scalable gain control?
+6. Improved mappings.
+7. Testing.
+8. Performance improvements and amendments.
