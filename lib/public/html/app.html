@@ -1,5 +1,6 @@
 <html>
 <head>
+  <!-- Inline CSS because there's not that much of it... I'm aware this is not common practice (insecure) and is frowned upon by Google -->
   <style>
     form {
       height: 20px;
@@ -40,7 +41,7 @@
       padding: 1px 18px;
     }
     .searchContainer {
-      float: left;
+
     }
     .rText {
       padding: 0px;
@@ -48,7 +49,7 @@
       width: 100px;
       height: 100px;
       position: relative;
-      z-index: 0;
+      z-index: 1;
     }
   </style>
   <title> Railsonify </title>
@@ -61,11 +62,11 @@
   <script src="js/synth.js"></script>
   <div>
     <div class ='rText' id='rText' align='right'></div>
-    <div align='left' class="searchContainer" style="width:500px;">
+    <div align='left' class="searchContainer" style="width:500px; height: 82px; z-index: 9;">
       <div align='center'>
         <p class='keyp'z> Station Lookup: </p>
       <form id="stationForm" method="POST" action="/">
-        <input name="station" type="text" placeholder="Enter a station name">
+        <input name="station" type="text" placeholder="Enter a station name" style="padding: 2px;">
         <input class='submissionButton' type="submit" value="Get">
         </form>
         <button class='startButton' id='startButton' value='Random' onclick='startWithRandom(this);'>Random</button>
@@ -74,11 +75,11 @@
     </div>
   </div>
     <div align='center' id='map' class='map'>
-      <canvas id='canvas0' width="1000" height="1000" style="z-index: 1; background: url(./img/map.jpg)"></canvas>
-      <canvas id='canvas1' width="1000" height="1000" style="position: absolute; left:92;  z-index: 2;"></canvas>
-      <canvas id='canvas2' width="1000" height="1000" style="position: absolute; left:92;  z-index: 3;"></canvas>
-      <canvas id='canvas3' width="1000" height="1000" style="position: absolute; left:92;  z-index: 4;"></canvas>
-      <canvas id='canvas4' width="1000" height="1000" style="position: absolute; left:92;  z-index: 5;"></canvas>
+      <canvas class='canvas' id='canvas0' width="1000" height="1000" style="z-index: 0; background: url(./img/map.jpg)"></canvas>
+      <canvas class='canvas' id='canvas1' width="1000" height="1000" style="position: absolute; left:471;  z-index: 1;"></canvas>
+      <canvas class='canvas' id='canvas2' width="1000" height="1000" style="position: absolute; left:471;  z-index: 2;"></canvas>
+      <canvas class='canvas' id='canvas3' width="1000" height="1000" style="position: absolute; left:471;  z-index: 3;"></canvas>
+      <canvas class='canvas' id='canvas4' width="1000" height="1000" style="position: absolute; left:471;  z-index: 4;"></canvas>
 
       <script src="js/canvas.js"></script>
       <div align='right'>
